@@ -117,31 +117,153 @@ main {
 
 .tems-content {
     width: 45%;
-   
+
 }
+
 .tems-title .Quick-list {
     color: #727272;
     font-weight: 500;
-     font-size: 2em;
+    font-size: 2em;
 }
-.tems-title .our{
-    color:  #131313;
+
+.tems-title .our {
+    color: #131313;
     font-weight: 700;
-     font-size: 2em;
+    font-size: 2em;
 }
-.tems-title .text-features{
+
+.tems-title .text-fact {
     color: #FF900E;
     font-weight: 700;
-     font-size: 2em;
+    font-size: 2em;
 }
 
-/* tems part end */
+/* features start */
+.features {
+    display: flex;
+    margin-top: 120px;
+    gap: 50px;
+}
+
+.feature-content {
+    width: 45%;
+    height: 100%;
+}
+
+.features-img {
+    width: 45%;
+    height: 100%;
+}
+
+.features-img img {
+    width: 100%;
+    height: 90%;
+    margin-left: 82px;
+}
+
+.feature-content .card {
+    margin-bottom: 15px;
+    padding: 5px 0px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding-left: 25px;
+}
+
+.ten-years-badge {
+    border-radius: 8px;
+    background: #FF900E;
+    color: #fff;
+    font-weight: 700;
+    width: 190px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+.ten-years-badge h2{
+    font-size: 3.5em;
+    margin: 0;
+}
+.ten-years-badge p{
+font-size: 1.2rem;
+}
+
+.features-title {
+    color: #131313;
+    font-size: 40px;
+    font-weight: 700;
+    border-left: 5px solid #FF900E;
+    padding-left: 15px;
+
+}
+
+.features-description,
+.card-description {
+    color: #727272;
+    font-size: 15px;
+    font-weight: 400;
+    /* padding: 10px 0px; */
+}
+
+.card-head {
+    color: #131313;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
 
 
+/* features end */
+/* fact part start */
+.fact {
+    padding: 50px 0px;
+}
 
+.facts-card-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 40px 30px;
+}
 
+.facts-card-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    gap: 10px;
+}
 
+.facts-card-container .card-stats {
+    color: #424242;
+    font-size: 2.5em;
+    font-weight: 600;
 
+}
+
+.facts-card-container .card-title {
+    color: #727272;
+    font-weight: 600;
+}
+
+/* sponsor part start */
+.sponsor {
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.sponsor-img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+    align-items: center;
+}
+
+.sponsor-img-container img {
+    width: 165px;
+    padding: 30px 0px;
+}
 
 
 
@@ -158,17 +280,29 @@ main {
         padding: 10px;
     }
 
-    nav, .tems-container {
+    nav,
+    .tems-container,
+    .facts-card-container,
+    .sponsor-img-container,
+    .features {
         flex-direction: column;
     }
-    .tems-img-container{
-        grid-template-columns: repeat(1,1fr);
+     
+    .tems-img-container {
+        grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
-    .tems-content{
+
+    .tems-content,.feature-content,.features-img {
         width: 100%;
     }
+    .features-img img{
+        margin: 0;
+    }
+    .ten-years-badge{
+        position: static;
     
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width:960px) {
@@ -176,8 +310,16 @@ main {
         padding: 30px;
     }
 
-    nav {
+    nav,
+    .sponsor-img-container,
+    .features {
         flex-direction: column;
+    }
+    .features-img,.feature-content {
+        width: 100%;
+    }
+    .features-img img{
+        margin: 0;
     }
 }
 
