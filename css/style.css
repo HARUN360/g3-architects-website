@@ -7,9 +7,18 @@
     padding: 0%;
     font-family: 'Work Sans', sans-serif;
 }
-.btn-praimary{
-    
+
+.btn-praimary {
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    border: 0;
+    cursor: pointer;
+    margin: 20px 0px;
 }
+
 /* common style end */
 
 /* header style start */
@@ -32,6 +41,7 @@ nav {
 
 nav>ul {
     display: flex;
+    padding: 20px 10px;
 }
 
 nav li {
@@ -59,11 +69,116 @@ nav li a {
     color: #131313;
     font-size: 48px;
     font-weight: 700;
-
+    margin: 20px 0px;
 }
-.banner-description{
+
+.banner-description,
+.tems-description {
     color: #727272;
     font-size: 17px;
     font-weight: 400;
+    margin: 16px 0px;
 }
+
+.banner img {
+    width: 100%;
+}
+
 /* banner section end */
+
+/* main section start */
+main {
+    max-width: 960px;
+    margin: 70px auto;
+    padding: 0px 20px;
+}
+
+/* main section end */
+
+
+/* tems part start */
+.tems-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 54px;
+}
+
+.tems-img-container {
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.tems-img-container img {
+    width: 100%;
+}
+
+.tems-content {
+    width: 45%;
+   
+}
+.tems-title .Quick-list {
+    color: #727272;
+    font-weight: 500;
+     font-size: 2em;
+}
+.tems-title .our{
+    color:  #131313;
+    font-weight: 700;
+     font-size: 2em;
+}
+.tems-title .text-features{
+    color: #FF900E;
+    font-weight: 700;
+     font-size: 2em;
+}
+
+/* tems part end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive media querie start */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 10px;
+    }
+
+    nav, .tems-container {
+        flex-direction: column;
+    }
+    .tems-img-container{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+    .tems-content{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 576px) and (max-width:960px) {
+    header {
+        padding: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* responsive media querie end */
